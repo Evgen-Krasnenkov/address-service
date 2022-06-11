@@ -27,8 +27,6 @@ public class AddressService {
 
     public AddressResponse getById(long id) {
         logger.info("AddressService provides:: getById with ID - {}", id);
-        boolean present = addressRepository.findById(id).isPresent();
-        AddressResponse addressResponse = new AddressResponse(addressRepository.findById(id).orElseThrow());
-        return addressResponse;
+        return new AddressResponse(addressRepository.findById(id).orElseThrow());
     }
 }
