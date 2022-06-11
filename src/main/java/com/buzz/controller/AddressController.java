@@ -6,7 +6,7 @@ import com.buzz.service.AddressService;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(value = "/api")
+@RequestMapping(value = "/api/address")
 public class AddressController {
     AddressService addressService;
 
